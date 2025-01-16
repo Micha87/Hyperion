@@ -1,12 +1,12 @@
 {
-    "id": "{80CFED1C-0FD8-D2C4-5EE6-A9AB2E4B1277}",
-    "name": "Hyperion Control",
+    "id": "{21FD589B-7ECE-6F3B-3949-C37BE32A139C}",
+    "name": "Hyperion",
     "author": "Michael Westphal",
     "url": "",
     "compatibility": {
-        "version": "7.0"
+        "version": "7.1"
     },
-    "version": "0.1",
+    "version": "1.0",
     "build": 0,
     "date": 0
 }
