@@ -180,7 +180,7 @@ declare(strict_types=1);
         $command = [
          	"command" => "instance",
   		"subcommand" => "startInstance",
-  		"instance" => $instanceId;
+  		"instance" => $instanceId
         ];
 
         $response = $this->SendCommand($command);
