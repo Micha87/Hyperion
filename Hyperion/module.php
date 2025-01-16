@@ -11,7 +11,7 @@ declare(strict_types=1);
 
         // Konfigurationsparameter definieren
         $this->RegisterPropertyString('IPAddress', '');
-	$this->RegisterPropertyInteger('Port', '');
+	$this->RegisterPropertyString('Port', '');
         $this->RegisterPropertyString('Token', '');
     }
 		
