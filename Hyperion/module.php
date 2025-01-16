@@ -178,9 +178,9 @@ declare(strict_types=1);
     {
         //$command = 'instance';
         $command = [
-         	"command" : "instance",
-  		"subcommand" : "startInstance",
-  		"instance" : $instanceId;
+         	"command" => "instance",
+  		"subcommand" => "startInstance",
+  		"instance" => $instanceId;
         ];
 
         $response = $this->SendCommand($command);
