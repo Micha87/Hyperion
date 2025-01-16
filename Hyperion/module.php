@@ -10,9 +10,9 @@ declare(strict_types=1);
         parent::Create();
 
         // Konfigurationsparameter definieren
-       // $this->RegisterPropertyString('IPAddress', '127.0.0.1');
-        //$this->RegisterPropertyInteger('Port', 19444);
-       // $this->RegisterPropertyString('Token', '');
+        $this->RegisterPropertyString('IPAddress', '');
+	$this->RegisterPropertyInteger('Port', );
+        $this->RegisterPropertyString('Token', '');
     }
 		
     public function Destroy()
