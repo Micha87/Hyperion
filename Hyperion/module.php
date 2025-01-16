@@ -173,8 +173,6 @@ declare(strict_types=1);
         $response = $this->SendCommand($command, $params);
         $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
     }
-}
 
-
-		
+	
 }
