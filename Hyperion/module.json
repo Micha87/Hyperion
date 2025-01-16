@@ -1,9 +1,9 @@
-{
+ {
     "id": "{C9D2BBA6-B2A6-4E1D-BF8E-564D6F2C3A91}",
     "name": "Hyperion Control",
     "type": 3,
-    "vendor": "YourName",
-    "aliases": ["Hyperion API"],
+    "vendor": "Michael Westphal",
+    "aliases": "Hyperion API",
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
