@@ -1,12 +1,11 @@
 <?php
 
-class HyperionControl extends IPSModule
-{
-    /**
-     * Instanz initialisieren.
-     */
+declare(strict_types=1);
+	class Hyperion extends IPSModule
+	{
+		
     public function Create()
-    {
+		{
         // Diese Zeile nicht löschen
         parent::Create();
 
