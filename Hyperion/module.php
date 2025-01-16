@@ -167,7 +167,7 @@ declare(strict_types=1);
         $command = 'instance';
         $params = [
             'instance' => $instanceId,
-            'action' => 'stop'
+            'subcommand' => 'stop'
         ];
 
         $response = $this->SendCommand($command, $params);
