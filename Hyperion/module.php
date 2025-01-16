@@ -1,4 +1,3 @@
-
 <?php
 
 class HyperionControl extends IPSModule
@@ -16,7 +15,11 @@ class HyperionControl extends IPSModule
         $this->RegisterPropertyInteger('Port', 19444);
         $this->RegisterPropertyString('AuthToken', '');
     }
-
+    public function Destroy()
+	{
+			//Never delete this line!
+			parent::Destroy();
+	}
     /**
      * Einstellungen beim Aktivieren prüfen.
      */
