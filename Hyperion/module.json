@@ -3,7 +3,7 @@
     "name": "Hyperion Control",
     "type": 3,
     "vendor": "Michael Westphal",
-    "aliases": "Hyperion API",
+    "aliases": ["Hyperion API"],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],
