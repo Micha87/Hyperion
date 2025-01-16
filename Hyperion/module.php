@@ -13,7 +13,7 @@ class HyperionControl extends IPSModule
         // Konfigurationsparameter definieren
         $this->RegisterPropertyString('Host', '127.0.0.1');
         $this->RegisterPropertyInteger('Port', 19444);
-        $this->RegisterPropertyString('AuthToken', '');
+        $this->RegisterPropertyString('Token', '');
     }
     public function Destroy()
 	{
