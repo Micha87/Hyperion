@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-	class Hyperion extends IPSModule
+	class HyperionControl extends IPSModule
 	{
 		
     public function Create()
