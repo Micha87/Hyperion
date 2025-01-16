@@ -8,10 +8,10 @@
     ],
     "actions":
     [
-        { "type": "Button", "caption": "Reboot", "onClick": "WLED_reboot($id);", "confirm": "reboot ?" }
+       
     ],
     "status":
     [
-	    { "code": 215,"icon": "error","caption": "Device unreachable"}
+	  
 	]
 }
