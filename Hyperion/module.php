@@ -120,7 +120,7 @@ declare(strict_types=1);
         $this->SendDebug('ServerInfo Response', $response, 0);
         return $response;
     }
-}
+
 
 	public function GetInstances()
     {
