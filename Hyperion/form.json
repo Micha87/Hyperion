@@ -3,7 +3,7 @@
     [
         { "name": "Token", "type": "ValidationTextBox", "caption": "Token" },
 	{ "type": "ValidationTextBox", "name": "IPAddress", "caption": "Host" },
-	{ "type": "ValidationTextBox", "name": "Port", "caption": "19444" }    
+	{ "type": "ValidationTextBox", "name": "Port", "caption": "Port" }    
         
     ],
     "actions":
