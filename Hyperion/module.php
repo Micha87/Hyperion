@@ -38,9 +38,9 @@ declare(strict_types=1);
      */
     public function SendCommand(string $command, array $params = [])
     {
-        $host = $this->ReadPropertyString('Host');
-        $port = $this->ReadPropertyInteger('Port');
-        $authToken = $this->ReadPropertyString('AuthToken');
+        $host = $this->ReadPropertyString('IPAddress');
+        $port = $this->ReadPropertyString('Port');
+        $authToken = $this->ReadPropertyString('Token');
 
         $url = "http://{$host}:{$port}/json-rpc";
         $data = json_encode(array_merge(['command' => $command], $params));
