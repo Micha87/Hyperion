@@ -145,7 +145,35 @@ declare(strict_types=1);
         return null;
     }
 
+	public function StartInstance(int $instanceId)
+    {
+        $command = 'instance';
+        $params = [
+            'instance' => $instanceId,
+            'action' => 'start'
+        ];
 
+        $response = $this->SendCommand($command, $params);
+        $this->SendDebug("Start Instance {$instanceId}", $response, 0);
+    }
+
+    /**
+     * Stoppt eine spezifische Instanz.
+     *
+     * @param int $instanceId Die ID der Instanz, die gestoppt werden soll.
+     */
+    public function StopInstance(int $instanceId)
+    {
+        $command = 'instance';
+        $params = [
+            'instance' => $instanceId,
+            'action' => 'stop'
+        ];
+
+        $response = $this->SendCommand($command, $params);
+        $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
+    }
+}
 
 
 		
