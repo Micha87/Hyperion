@@ -120,4 +120,33 @@ declare(strict_types=1);
         $this->SendDebug('ServerInfo Response', $response, 0);
         return $response;
     }
+
+/**
+     * Ruft die Liste der Instanzen ab.
+     *
+     * @return array|null Die Liste der Instanzen oder null bei Fehlern.
+     */
+    public function GetInstances()
+    {
+        $command = 'serverinfo';
+        $response = $this->SendCommand($command);
+
+        if ($response) {
+            $decodedResponse = json_decode($response, true);
+
+            if (isset($decodedResponse['info']['instances'])) {
+                $instances = $decodedResponse['info']['instances'];
+                $this->SendDebug('Instances', json_encode($instances), 0);
+                return $instances;
+            }
+        }
+
+        $this->LogMessage('Fehler beim Abrufen der Instanzen', KL_ERROR);
+        return null;
+    }
+
+
+
+
+		
 }
