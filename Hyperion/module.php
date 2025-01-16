@@ -134,7 +134,7 @@ declare(strict_types=1);
         if ($response) {
             $decodedResponse = json_decode($response, true);
 
-            if (isset($decodedResponse['info']['instances'])) {
+            if (isset($decodedResponse['info']['instance'])) {
                 $instances = $decodedResponse['info']['instance'];
                 $this->SendDebug('Instance', json_encode($instances), 0);
                 return $instances;
