@@ -169,23 +169,11 @@ declare(strict_types=1);
             'instance' => $instanceId,
             'subcommand' => 'stop'
         ];
-
+	
         $response = $this->SendCommand($command, $params);
         $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
     }
 
-     public function StopInstance1(int $instanceId)
-    {
-        //$command = 'instance';
-        $command = [
-         	"command" => "instance",
-  		"subcommand" => "startInstance",
-  		"instance" => $instanceId
-        ];
-
-        $response = $this->SendCommand($command);
-        $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
-    }
-
+    
 		
 }
