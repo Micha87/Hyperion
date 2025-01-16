@@ -1,7 +1,9 @@
 {
     "elements":
     [
-        { "name": "Topic", "type": "ValidationTextBox", "caption": "Topic:" }
+        { "name": "Token", "type": "ValidationTextBox", "caption": "Token" },
+	{ "type": "ValidationTextBox", "name": "IPAddress", "caption": "Host" }
+	    
         
     ],
     "actions":
