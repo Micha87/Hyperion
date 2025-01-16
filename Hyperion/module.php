@@ -11,7 +11,7 @@ class HyperionControl extends IPSModule
         parent::Create();
 
         // Konfigurationsparameter definieren
-        $this->RegisterPropertyString('Host', '127.0.0.1');
+        $this->RegisterPropertyString('IPAddress', '127.0.0.1');
         $this->RegisterPropertyInteger('Port', 19444);
         $this->RegisterPropertyString('Token', '');
     }
