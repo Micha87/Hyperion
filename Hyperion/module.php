@@ -145,11 +145,12 @@ declare(strict_types=1);
         return null;
     }
 
-	public function StartInstance(int $instanceId)
+	public function StartInstance(int $value)
     {
         $command = 'instance';
+        $msg = strval($value);    
         $params = [
-            'instance' => $instanceId,
+            'instance' => $msg,
             'action' => 'start'
         ];
 
