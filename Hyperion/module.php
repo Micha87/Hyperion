@@ -149,8 +149,8 @@ declare(strict_types=1);
     {
         $command = 'instance';
         $params = [
-            'instance' => $instanceId,
-            'action' => 'start'
+            'subcommand' => 'startInstance',
+            'instance' => $instanceId
         ];
 
         $response = $this->SendCommand($command, $params);
@@ -166,14 +166,11 @@ declare(strict_types=1);
     {
         $command = 'instance';
         $params = [
-            'instance' => $instanceId,
-            'subcommand' => 'stop'
+            'subcommand' => 'stopInstance',
+            'instance' => $instanceId
         ];
-	
+
         $response = $this->SendCommand($command, $params);
         $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
     }
-
-    
-		
 }
