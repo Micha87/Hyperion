@@ -197,6 +197,6 @@ public function SwitchToInstance(int $instanceId)
         ];
 	$response = $this->SendCommand($command, $params);
         $this->SendDebug("Set Component State [{$component}]", $response, 0);
-
+    }
 		
 }
