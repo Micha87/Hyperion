@@ -242,6 +242,6 @@ public function SetComponentState(string $component, bool $state, ?int $instance
         if ($response === null) {
             $this->LogMessage("Fehler beim Wechseln zur Instanz '{$instanceId}'", KL_ERROR);
         }
-    
+    }
 		
 }
