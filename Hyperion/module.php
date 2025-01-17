@@ -174,7 +174,7 @@ declare(strict_types=1);
         $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
     }
 
- public function SetComponentState(string $component, bool $state)
+ public function SetComponentState1(string $component, bool $state)
     {
         $command = 'componentstate';
         $params = [
@@ -188,7 +188,7 @@ declare(strict_types=1);
         $this->SendDebug("Set Component State [{$component}]", $response, 0);
     }
 
-public function SwitchToInstance(int $instanceId)
+public function SwitchToInstance1(int $instanceId)
     {
         $command = 'instance';
         $params = [
@@ -198,5 +198,50 @@ public function SwitchToInstance(int $instanceId)
 	$response = $this->SendCommand($command, $params);
         $this->SendDebug("Set Component State [{$component}]", $response, 0);
     }
+	
+public function SetComponentState(string $component, bool $state, ?int $instanceId = null)
+    {
+        // Optional: Zur angegebenen Instanz wechseln
+        if ($instanceId !== null) {
+            $this->SwitchToInstance($instanceId);
+        }
+
+        // Komponente aktivieren oder deaktivieren
+        $command = 'componentstate';
+        $params = [
+            'componentstate' => [
+                'component' => $component,
+                'state' => $state,
+            ]
+        ];
+
+        $response = $this->SendCommand($command, $params);
+        $this->SendDebug("Set Component State [{$component}]", $response, 0);
+
+        if ($response === null) {
+            $this->LogMessage("Fehler beim Setzen des Zustands für Komponente '{$component}'", KL_ERROR);
+        }
+    }
+
+    /**
+     * Wechselt zu einer bestimmten Hyperion-Instanz.
+     *
+     * @param int $instanceId Die ID der Instanz, zu der gewechselt werden soll.
+     */
+    private function SwitchToInstance(int $instanceId)
+    {
+        $command = 'instance';
+        $params = [
+            'subcommand' => 'switchTo',
+            'instance' => $instanceId
+        ];
+
+        $response = $this->SendCommand($command, $params);
+        $this->SendDebug("Switch To Instance [{$instanceId}]", $response, 0);
+
+        if ($response === null) {
+            $this->LogMessage("Fehler beim Wechseln zur Instanz '{$instanceId}'", KL_ERROR);
+        }
+    
 		
 }
