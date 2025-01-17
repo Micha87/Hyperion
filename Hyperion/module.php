@@ -188,8 +188,15 @@ declare(strict_types=1);
         $this->SendDebug("Set Component State [{$component}]", $response, 0);
     }
 
-
-
+public function SwitchToInstance(int $instanceId)
+    {
+        $command = 'instance';
+        $params = [
+            'subcommand' => 'switchTo',
+            'instance' => $instanceId
+        ];
+	$response = $this->SendCommand($command, $params);
+        $this->SendDebug("Set Component State [{$component}]", $response, 0);
 
 		
 }
