@@ -173,4 +173,23 @@ declare(strict_types=1);
         $response = $this->SendCommand($command, $params);
         $this->SendDebug("Stop Instance {$instanceId}", $response, 0);
     }
+
+ public function SetComponentState(string $component, bool $state)
+    {
+        $command = 'componentstate';
+        $params = [
+            'componentstate' => [
+                'component' => $component,
+                'state' => $state,
+            ]
+        ];
+
+        $response = $this->SendCommand($command, $params);
+        $this->SendDebug("Set Component State [{$component}]", $response, 0);
+    }
+}
+
+
+
+		
 }
