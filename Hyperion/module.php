@@ -187,7 +187,7 @@ declare(strict_types=1);
         $response = $this->SendCommand($command, $params);
         $this->SendDebug("Set Component State [{$component}]", $response, 0);
     }
-}
+
 
 
 
